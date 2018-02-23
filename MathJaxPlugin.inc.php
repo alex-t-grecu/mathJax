@@ -9,10 +9,9 @@
  * @class MathJaxPlugin
  * @ingroup plugins_generic_mathjax
  *
- * @brief Plugin to allow MathJax scripts to be added to OCS
+ * @brief Plugin to allow MathJax scripts to be added to OJS
  */
 
-// $Id$
 
 
 import('lib.pkp.classes.plugins.GenericPlugin');
@@ -35,10 +34,6 @@ class MathJaxPlugin extends GenericPlugin {
 	}
 
 
-//	function zatyk($hookName,$args){
-//		return false;
-//	}
-
 	/**
 	 * Hook callback function for TemplateManager::display
 	 * @param $hookName string
@@ -47,7 +42,7 @@ class MathJaxPlugin extends GenericPlugin {
 	 */
 	function insertMJ($hookName, $args) {
 		$templateManager =& $args[0];
-		$MathJaxScript="</script>\n";
+		$MathJaxScript = "</script>\n";
 		$MathJaxScript .= "<script type=\"text/x-mathjax-config\">\n MathJax.Hub.Config({\n   tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]},\n   processEscapes: true\n }); \n</script>\n";
 		$MathJaxScript .= '<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">' ."\n";
 		$templateManager->addJavaScript('mathjax', $MathJaxScript, 
@@ -58,15 +53,6 @@ class MathJaxPlugin extends GenericPlugin {
 		);
 		return false;
 	}
-
-	/**
-	 * Get the name of the settings file to be installed on new context
-	 * creation.
-	 * @return string
-	 */
-//	function getContextSpecificPluginSettingsFile() {
-//		return $this->getPluginPath() . '/settings.xml';
-//	}
 
 	/**
 	 * Get the display name of this plugin

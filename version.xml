@@ -7,15 +7,14 @@
   * Copyright (c) 2017 Vasyl Ostrovskyi
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OCS version information.
+  * Plugin version information.
   *
-  * $Id$
   -->
 <version>
 	<application>mathjax</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.1</release>
-	<date>2017-11-26</date>
+	<release>1.0.0.2</release>
+	<date>2017-12-25</date>
 	<lazy-load>1</lazy-load>
 	<class>MathJaxPlugin</class>
 </version>
